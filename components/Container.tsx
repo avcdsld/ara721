@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
-import { useTheme } from 'next-themes';
+// import { useTheme } from 'next-themes';
 import { useTranslation } from 'react-i18next';
 import Head from 'next/head';
 import NextLink from 'next/link';
@@ -31,7 +31,7 @@ function NavItem({ href, text }) {
 
 export default function Container(props) {
   const [mounted, setMounted] = useState(false);
-  const { resolvedTheme, setTheme } = useTheme();
+  // const { resolvedTheme, setTheme } = useTheme();
   const { t, i18n } = useTranslation();
 
   useEffect(() => setMounted(true), []);
@@ -142,13 +142,15 @@ export default function Container(props) {
           </button> */}
         </nav>
       </div>
-      <main
-        id="skip"
-        className="flex flex-col justify-center px-8 bg-gray-50 dark:bg-gray-900"
-      >
-        {children}
-        <Footer />
-      </main>
+      {mounted && (
+        <main
+          id="skip"
+          className="flex flex-col justify-center px-8 bg-gray-50 dark:bg-gray-900"
+        >
+          {children}
+          <Footer />
+        </main>
+      )}
     </div>
   );
 }

@@ -21,9 +21,9 @@ export default function Protein() {
           alt="Protein"
           height={400}
           width={400}
-          sizes="20vw"
           src="/static/images/protein.gif"
           className="mt-4 mb-8"
+          priority
         />
         <p className="text-gray-600 dark:text-gray-400 mb-8">
           {t('protein.abstract')}
