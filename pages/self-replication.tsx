@@ -68,7 +68,6 @@ export default function SelfReplication() {
             <SyntaxHighlighter
               language={'swift'}
               style={synthwave84}
-              // showLineNumbers
               layout="responsive"
               customStyle={{
                 maxWidth: width - 60

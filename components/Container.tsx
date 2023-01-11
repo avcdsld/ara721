@@ -34,7 +34,6 @@ export default function Container(props) {
   const { resolvedTheme, setTheme } = useTheme();
   const { t, i18n } = useTranslation();
 
-  // After mounting, we have access to the theme
   useEffect(() => setMounted(true), []);
 
   const changeLang = (lang) => {
