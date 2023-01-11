@@ -1,0 +1,64 @@
+{
+  "about": {
+    "subTitle": "Smart Contract Art Collection",
+    "description": " Here is a site that showcases Ara's experimental artwork using smart contracts."
+  },
+  "protein": {
+    "subTitle": "― replication, influence, and limit",
+    "workInfo": "NFT contract, Solidity, 2022",
+    "abstract": "“Protein” is an NFT contract created with an awareness of associations between individual NFTs within the same smart contract. When an NFT is newly minted, it affects “all” other NFTs in the contract. This is very common with physical objects, but most NFTs as of 2022 do not have this property. This NFT contract gives such a natural property to digital objects.",
+    "replication": "Replication",
+    "replicationDescription": "NFT can be minted by anyone. At that time, all NFTs minted so far will be sent to their previous owner. The NFT owned by the first minter will be replaced by the NFT with the latest ID each time someone mints it. This is similar to a protein being replaced by a new one and metabolism taking place.",
+    "influence": "Influence",
+    "influenceDescription": "The birth of one NFT will cause all other NFTs to move. When someone does something in this world, it will affect everything else in some way. This is also true in the digital space. This work will be one of the earliest simple examples of its implementation.",
+    "limit": "Limit",
+    "limitDescription": "Living things will die at some point. Metabolism will eventually end; DNA replication is not infinite. The same is true for this NFT: minting a new NFT causes all other NFTs to be sent, and the amount of processing grows as the number of NFTs grows. And at some number of mints, it will reach Ethereum's gas limit. This will be the mint limit for this NFT.",
+    "links": "Links",
+    "etherscanDescription": "If you value this NFT and wish to participate in the artwork, you can mint the NFT by executing the safeMint() function in Etherscan. Enter your ETH address as the argument. All you need is the gas cost.",
+    "githubDescription": "If you want to know more about how this NFT works, you can find the source code and development environment of the smart contract on GitHub.",
+    "openseaDescription": "If you want to see images and metadata of the NFT, or if you want to buy or sell the NFT, you can use OpenSea. Note that this work does not focus on the visuals of the NFT, and the metadata can be modified by the contract administrator."
+  },
+  "selfReplication": {
+    "workInfo": "Cadence smart contract, 2022",
+    "abstract": "“Self-Replication” is a smart contract that can replicate itself. It is deployed on the Flow blockchain using the Cadence programming language, which allows for intuitive code expression.",
+    "codeExecution": "Ideal code writing/execution environment",
+    "codeExecutionDescription": "Smart contracts executed on the blockchain are a code execution environment with common state throughout the world, where who created the code and when it was created and who executed what remains forever. This is an ideal environment for writing and executing artistic code. I used this environment to explore ways to create code that changes as it receives feedback. This work is the first step in that direction, creating a minimal code that can replicate itself.",
+    "codeIncubator": "Accounts as mothers for nurturing code",
+    "codeIncubatorDescription": "Flow provides a storage area for each account where smart contracts can be deployed. In the minimal implementation, I have created one function that takes an account as a function argument and deploys a new contract to that account in code. The code of the deployed contract internally references the code of the executing contract itself. This looks as if it is giving a new life to the mother.",
+    "codeDescription": "Explanation of the code",
+    "codeDescriptionDescription": "The `SelfReplication` contract has a contract variable named `name`, which is initialized to a fixed string when the contract is deployed. The `replicate` function takes an account as an argument and adds the contract within that account. In this case, the code passed as the argument is passed as it is. Its own code is taken from the account (`self.account`) where the contract is deployed, specifying the name of the contract.",
+    "links": "Links",
+    "flowscanDescription1": "The first deployed contract",
+    "flowscanDescription2": "Transaction to replicate the contract",
+    "githubDescription": "Source code for the contract and transaction"
+  },
+  "mutation": {
+    "workInfo": "Cadence smart contract, 2022",
+    "abstract": "“Mutation” is a further development of “Self-Replication”, a smart contract that can randomly change its own code in addition to replicating it.",
+    "meaning": "Continuous code change history",
+    "meaningDescription": "With blockchain and smart contracts, code can be written and executed in the same place. Traditionally, to achieve this, a separate, dedicated environment had to be built, but smart contracts enable this difficulty to be overcome. This piece provides the simple example. The smart contract has a function called `mutate()` that can be called to make changes to its own code. In this example, the name of the contract `Mutation` is randomly changed to a single letter `X`. For example, `MXtation`. The code that has been modified is then replicated by calling the function `replicate()`. Any history of changes to the code will remain persistent.",
+    "codeDescription": "Explanation of the code",
+    "codeDescriptionDescription": "The `Mutation` contract has `mutate()` function and `replicate()` function. When the `mutate()` function is called, it determines the position at which to rewrite one character of the contract's name, pseudo-randomly, using the current block ID (line 13). In lines 26-29, the part of the code of the contract that contains the name is replaced with the changed name and stored in the contract variable. Then, when the `replication()` function is called, it deploys the stored name and code into the passed account (line 33).",
+    "links": "Links",
+    "flowscanDescription1": "The first deployed contract",
+    "flowscanDescription2": "Transaction to mutate the contract",
+    "githubDescription": "Source code for the contract and transaction"
+  },
+  "semi": {
+    "workInfo": "NFT Contracts, Solidity, 2022",
+    "demoNote": "* Click on the cicada to hear the sound.",
+    "abstract": "Semi (蝉 / セミ / Cicada) is an experimental NFT smart contract that incorporates a variety of elements. Digital items that influence each other, interactive content that sounds, updatable and composable design, and better metadata that empowers the owner.",
+    "affectEachOthers": "Influencing Each Other",
+    "affectEachOthersDescription": "The NFT can be minted by anyone; when the NFT is minted, a cicada of one of five randomly determined types is rendered at a random position (x, y coordinates). If you own more than one cicada, the number of cicadas will be rendered. The image of each cicada is generated by all other cicadas owned by the same address. When a cicada is sent to another address, the cicada is gone from the images of all other cicadas of the same address. This property will be an important factor in giving the digital item a real feeling.",
+    "interactive": "Interactive Content with Sound",
+    "interactiveDescription": "Clicking on a cicada will play a sound that corresponds to the type of cicada. As the number and types of cicadas increase, more sound combinations can be enjoyed. The logic is implemented in HTML and JavaScript, with code generated on-chain.",
+    "composability": "Updatable and Composable Design",
+    "composabilityDescription": "The NFT contract is designed so that the renderer that draws the image can be changed. This allows for incremental changes to the content in addition to allowing for maintenance on the rendering. In the renderer, logic and assets are completely separated. All logic is generated on-chain, while assets reference off-chain images and music. In other words, this is not full on-chain, but it is a semi-on-chain NFT.",
+    "betterMetadata": "Better Metadata with Owner Authority",
+    "betterMetadataDescription": "What exactly do we own by using NFT technology? One answer is the association with some metadata. You could say that the metadata that is associated is the identity of the digital object as perceived by its owner. The metadata associated with the object is not something that can be changed by someone else without permission. This NFT allows the contract creator to update the NFT's renderer, but it presents a better way for metadata by allowing the owner to choose its association. Owners are free to select any previously registered renderer they desire.",
+    "links": "Links",
+    "etherscanDescription": "If you value this NFT and wish to participate in the artwork, you can mint the NFT by executing the mint() function in Etherscan. Enter your ETH address as the argument. All you need is the gas cost.",
+    "githubDescription": "If you want to know more about how this NFT works, you can find the source code and development environment of the smart contract on GitHub.",
+    "openseaDescription": "If you want to see images and metadata of the NFT, or if you want to buy or sell the NFT, you can use OpenSea."
+  }
+}

@@ -1,12 +1,14 @@
-import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
+import { useTranslation } from 'react-i18next';
+import Head from 'next/head';
 import NextLink from 'next/link';
 import cn from 'classnames';
 
 import Footer from 'components/Footer';
 import MobileMenu from 'components/MobileMenu';
+import menuData from 'components/menu-data.json';
 
 function NavItem({ href, text }) {
   const router = useRouter();
@@ -30,19 +32,32 @@ function NavItem({ href, text }) {
 export default function Container(props) {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
+  const { t, i18n } = useTranslation();
 
   // After mounting, we have access to the theme
   useEffect(() => setMounted(true), []);
 
+  const changeLang = (lang) => {
+    i18n.changeLanguage(lang);
+  };
+
   const { children, ...customMeta } = props;
   const router = useRouter();
   const meta = {
-    title: 'Lee Robinson – Developer, writer, creator.',
-    description: `Front-end developer, JavaScript enthusiast, and course creator.`,
-    image: 'https://leerob.io/static/images/lee-banner.png',
+    title: 'ara721.art',
+    description: `Smart Contract Art Collection`,
+    image: 'https://ara721.art/static/images/banner.png',
     type: 'website',
     ...customMeta
   };
+
+  const path = router.asPath;
+  menuData.works.map((work: any) => {
+    if (path.startsWith(work.path)) {
+      meta.title = work.name + ' | ' + 'ara721.art';
+      meta.image = work.ogpImage;
+    }
+  });
 
   return (
     <div className="bg-gray-50 dark:bg-gray-900">
@@ -50,15 +65,18 @@ export default function Container(props) {
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
-        <meta property="og:url" content={`https://leerob.io${router.asPath}`} />
-        <link rel="canonical" href={`https://leerob.io${router.asPath}`} />
+        <meta
+          property="og:url"
+          content={`https://ara721.art${router.asPath}`}
+        />
+        <link rel="canonical" href={`https://ara721.art${router.asPath}`} />
         <meta property="og:type" content={meta.type} />
-        <meta property="og:site_name" content="Lee Robinson" />
+        <meta property="og:site_name" content="ara721.art" />
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@leeerob" />
+        <meta name="twitter:site" content="@arandoros" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
@@ -73,13 +91,23 @@ export default function Container(props) {
           </a>
           <div className="ml-[-0.60rem]">
             <MobileMenu />
-            <NavItem href="/" text="Home" />
-            <NavItem href="/guestbook" text="Guestbook" />
-            <NavItem href="/dashboard" text="Dashboard" />
-            <NavItem href="/blog" text="Blog" />
-            <NavItem href="/snippets" text="Snippets" />
+            <NavItem href="/" text="About" />
+            <span className="text-gray-400 hidden md:inline-block">|</span>
+            {menuData.works.map((work: any, index: number) => {
+              return <NavItem key={index} href={work.path} text={work.name} />;
+            })}
           </div>
           <button
+            aria-label="Change Language"
+            type="button"
+            className="w-20 h-9 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all"
+            onClick={() =>
+              changeLang(i18n.resolvedLanguage === 'en' ? 'ja' : 'en')
+            }
+          >
+            {mounted && (i18n.resolvedLanguage === 'en' ? '日本語' : 'English')}
+          </button>
+          {/* <button
             aria-label="Toggle Dark Mode"
             type="button"
             className="w-9 h-9 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all"
@@ -112,7 +140,7 @@ export default function Container(props) {
                 )}
               </svg>
             )}
-          </button>
+          </button> */}
         </nav>
       </div>
       <main

@@ -1,19 +1,26 @@
+const removeImports = require("next-remove-imports")();
+
 /**
  * @type {import('next').NextConfig}
  */
-module.exports = {
+module.exports = removeImports({
   reactStrictMode: true,
   images: {
-    domains: [
-      'i.scdn.co', // Spotify Album Art
-      'pbs.twimg.com', // Twitter Profile Picture
-      'cdn.sanity.io'
-    ]
+    unoptimized: true
   },
   experimental: {
     fontLoaders: [
       { loader: '@next/font/google', options: { subsets: ['latin'] } }
-    ]
+    ],
+    esmExternals: true
+  },
+  trailingSlash: true,
+  webpack: (config, options) => {
+    config.module.rules.push({
+      test: /\.mp3/,
+      loader: 'file-loader',
+    });
+    return config;
   },
   async headers() {
     return [
@@ -23,7 +30,7 @@ module.exports = {
       }
     ];
   }
-};
+});
 
 // https://nextjs.org/docs/advanced-features/security-headers
 const ContentSecurityPolicy = `
@@ -32,7 +39,7 @@ const ContentSecurityPolicy = `
     child-src *.youtube.com *.google.com *.twitter.com;
     style-src 'self' 'unsafe-inline' *.googleapis.com;
     img-src * blob: data:;
-    media-src 'none';
+    media-src *;
     connect-src *;
     font-src 'self';
 `;

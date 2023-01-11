@@ -1,7 +1,8 @@
 import 'styles/global.css';
 
+import { I18nextProvider } from 'react-i18next';
+import i18n from '../lib/i18n';
 import { ThemeProvider } from 'next-themes';
-import { SessionProvider } from 'next-auth/react';
 import { Inter } from '@next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 
@@ -12,13 +13,13 @@ export default function App({
   pageProps: { session, ...pageProps }
 }) {
   return (
-    <SessionProvider session={session}>
-      <ThemeProvider attribute="class">
+    <ThemeProvider attribute="class">
+      <I18nextProvider i18n={i18n}>
         <main className={interVariable.className}>
           <Component {...pageProps} />
           <Analytics />
         </main>
-      </ThemeProvider>
-    </SessionProvider>
+      </I18nextProvider>
+    </ThemeProvider>
   );
 }

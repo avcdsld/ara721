@@ -1,0 +1,24 @@
+{
+  "works": [
+    {
+      "name": "Protein",
+      "path": "/protein",
+      "ogpImage": "https://ara721.art/static/images/banner-protein.png"
+    },
+    {
+      "name": "Self-Replication",
+      "path": "/self-replication",
+      "ogpImage": "https://ara721.art/static/images/banner-self-replication.png"
+    },
+    {
+      "name": "Mutation",
+      "path": "/mutation",
+      "ogpImage": "https://ara721.art/static/images/banner-mutation.png"
+    },
+    {
+      "name": "Semi",
+      "path": "/semi",
+      "ogpImage": "https://ara721.art/static/images/banner-semi.png"
+    }
+  ]
+}
