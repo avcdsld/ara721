@@ -14,7 +14,7 @@ export default function App({
   init();
 
   return (
-    <ThemeProvider attribute="class">
+    <ThemeProvider attribute="class" themes={["dark"]}>
       <I18nextProvider i18n={i18n}>
         <main className={interVariable.className}>
           <Component {...pageProps} />

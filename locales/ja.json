@@ -60,5 +60,24 @@
     "etherscanDescription": "もしあなたがこの NFT に価値を見出し、作品に参加することを望むなら、Etherscan にて mint() 関数を実行することで NFT を mint できます。引数にはあなたの ETH アドレスを入力してください。必要なのは Gas 代だけです。",
     "githubDescription": "もしあなたがこの NFT の詳細の仕組みを知りたいなら、GitHub でスマートコントラクトのソースコードや開発環境をみることができます。",
     "openseaDescription": "もしあなたがこの NFT の画像やメタデータをみたいなら、または、NFT を売買したいなら、OpenSea を使うことができます。"
+  },
+  "theNft": {
+    "subTitle": "― What makes an NFT an NFT?",
+    "workInfo": "NFT コントラクト, Cadence and Solidity, 2023",
+    "abstract": "「The NFT」は、NFT の本質を問う 2 つのスマートコントラクトから成る作品です。ひとつは、リソース指向のプログラミング言語である Cadence を使った NFT コントラクト、もうひとつは、現在最も普及しているスマートコントラクト言語であるSolidity を使った NFT コントラクトです。",
+    "whatIsNFT": "NFT を NFT たらしめるもの",
+    "whatIsNFTDescription": "この NFT が返す最も重要なメタデータは「ID」です。それは単純に、このコントラクトの中で順番に採番された数値です。NFT には画像など様々な情報を紐づけることができますが、その紐付けが一意であることは証明できません。本質的にその NFT を NFT たらしめるものは、そのスマートコントラクトの中で生成された、アイデンティティを示す数字だけである可能性があります。",
+    "objectLikeExpression": "オブジェクト的な表現",
+    "objectLikeExpressionDescription1": "まずは Cadence 言語によって作られた NFT について説明します。主要なコードは以下となります。`NFT` というリソース定義には、`id` というメンバ変数があり、`whatAreYou` と聞かれると自分の `id` を返します。私たちは、このリソース定義によって、NFT をオブジェクトとして扱うことができます。このリソースをインスタンス化したオブジェクトが、所有者のアカウントの中に保存されます。これは構造的に直感的で、ドメイン駆動の設計です。",
+    "objectLikeExpressionDescription2": "さらにコードをみてみます。NFT リソースは、以下の `getViews` 関数と `resolveView` 関数を持っています。これらは Flow の NFT 標準で定められているもので、これらを使うと、その NFT のメタデータを複数の任意の型で返すことができます。ここで、独自に定義した型である、TextPlain 構造体、TextHtml 構造体、ImageSvg 構造体を返す実装を行いました。これらは、NFT の ID を、様々なコンテンツタイプで表現したデータです。",
+    "objectLikeExpressionDescription3": "データは、それぞれ以下のようなものです（ID = 1 の場合）。",
+    "objectLikeExpressionDescription4": "これらはすべて、同じ「ID」を違ったフォーマットで表現したものです。型はもっと増やすこともできますが、これらの本質は「ID」というひとつのプロパティをなんらかの側面からみたものだということです。",
+    "conceptualExpression": "概念的な表現",
+    "conceptualExpressionDescription1": "次に、Solidity 言語によって作られた NFT について説明します。Ethereum の NFT メタデータ標準に従い、`tokenURI` 関数で指定した ID の NFT のメタデータを返します。この実装では、名前としてその NFT の ID を、画像の URL として、あらかじめ指定した URL の後ろに NFT の ID を付与した文字列を返しています。この構造は実はとても歪です。`tokenURI` 関数を実行してメタデータを取得するには、NFT の ID 情報が必要です。しかし、メタデータの本質が ID だとすると、我々は既に知っている ID 情報を指定して、その同じ ID の情報を取得することになります。いったい我々はこの関数で何を得ようとしているのかわからなくなります。NFT の実体は、スマートコントラクト上にはありません。",
+    "conceptualExpressionDescription2": "Solidity の NFT コントラクトにも、text/plain、text/html、image/svg という 3 つのコンテンツタイプで NFT のメタデータを取得できる関数を用意しました。これらを実行する際にも、NFT の ID を指定することになり、関数の内部では引数で渡された ID 情報を使って、それぞれのフォーマットのデータを返します。これらのデータと NFT との紐付けは、どこにもありません。さて、NFT とは何ですか？",
+    "links": "リンク",
+    "flowscanDescription": "Cadence 言語によるスマートコントラクト",
+    "etherscanDescription": "Solidity 言語によるスマートコントラクト",
+    "githubDescription": "スマートコントラクトのソースコードや開発環境"
   }
 }

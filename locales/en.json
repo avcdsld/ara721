@@ -60,5 +60,24 @@
     "etherscanDescription": "If you value this NFT and wish to participate in the artwork, you can mint the NFT by executing the mint() function in Etherscan. Enter your ETH address as the argument. All you need is the gas cost.",
     "githubDescription": "If you want to know more about how this NFT works, you can find the source code and development environment of the smart contract on GitHub.",
     "openseaDescription": "If you want to see images and metadata of the NFT, or if you want to buy or sell the NFT, you can use OpenSea."
+  },
+  "theNft": {
+    "subTitle": "― What makes an NFT an NFT?",
+    "workInfo": "NFT Contracts, Cadence and Solidity, 2023",
+    "abstract": "“The NFT” is a work consisting of two smart contracts that question the nature of NFT. One is an NFT contract using Cadence, a resource-oriented programming language, and the other is an NFT contract using Solidity, the most popular smart contract language today.",
+    "whatIsNFT": "What Makes an NFT an NFT",
+    "whatIsNFTDescription": "The most important metadata returned by this NFT is the “ID“. It is simply a number that is sequentially numbered within this contract; an NFT can be associated with a variety of information, including images, but that association cannot be proven to be unique. Essentially, the only thing that makes an NFT an NFT may be the numbers generated within the smart contract that indicate its identity.",
+    "objectLikeExpression": "Object-like Expression",
+    "objectLikeExpressionDescription1": "Let's begin by describing the NFT created by the Cadence language. The main code is as follows. The resource definition `NFT` has a member variable `id` that returns its own `id` when asked `whatAreYou`. This resource definition allows us to treat NFT as an object. An object instantiating this resource is stored in the owner's account. This is structurally intuitive and domain-driven design.",
+    "objectLikeExpressionDescription2": "Looking at the code further, the NFT resource has the following `getViews` and `resolveView` functions. These are defined in Flow's NFT standard, and can be used to return any of several arbitrary types of metadata for that NFT. Here, I have implemented returning my own defined types, the TextPlain, TextHtml, and ImageSvg structures. These are data representing the NFT's ID with various content types.",
+    "objectLikeExpressionDescription3": "The data each looks like the following (for ID = 1):",
+    "objectLikeExpressionDescription4": "These are all representations of the same “ID“ in different formats. There can be more types, but the essence of these is that they are some aspect of a single property called “ID“.",
+    "conceptualExpression": "Conceptual Expression",
+    "conceptualExpressionDescription1": "Next, let's talk about NFTs created by the Solidity language, which follow Ethereum's NFT metadata standard and return metadata for the NFT whose ID is specified by the `tokenURI` function. This implementation returns the NFT's ID as a name and the image URL as a string containing the pre-specified URL followed by the NFT's ID. This structure is actually very distorted. To get metadata by executing the `tokenURI` function, the NFT's ID information is required. But if the essence of metadata is an ID, then we are supposed to specify the ID information we already know and retrieve the information for that same ID. The NFT entity is not on the smart contract.",
+    "conceptualExpressionDescription2": "Solidity's NFT contract also provides functions to retrieve NFT metadata for three content types: text/plain, text/html, and image/svg. When executing these functions, the ID of the NFT is also specified, and the functions use the ID information passed as an argument to return data in each format. There is no connection between these data and NFTs anywhere. Now, what is an NFT?",
+    "links": "Links",
+    "flowscanDescription": "Smart contract with Cadence language",
+    "etherscanDescription": "Smart contract with Solidity language",
+    "githubDescription": "Source codes and development environment"
   }
 }

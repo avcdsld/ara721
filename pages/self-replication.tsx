@@ -38,7 +38,7 @@ export default function SelfReplication() {
           {t('selfReplication.workInfo')}
         </h3>
         <Image
-          alt="Protein"
+          alt="Self-Replication"
           height={300}
           width={600}
           src="/static/images/self-replication.png"

@@ -58,7 +58,7 @@ export default function Mutation() {
           {t('mutation.workInfo')}
         </h3>
         <Image
-          alt="Protein"
+          alt="Mutation"
           height={400}
           width={600}
           src="/static/images/mutation.png"
