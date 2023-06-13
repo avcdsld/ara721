@@ -214,3 +214,114 @@ table {
 .prose .callout > p {
   margin: 0 !important;
 }
+
+a {
+  color: inherit !important;
+}
+
+.full {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: center / cover white;
+}
+
+.digitaiNativeArt {
+  background: black;
+  color: white;
+  font-family: var('--font-roboto-mono');
+  font-weight: bold;
+  font-size: 7vw;
+}
+
+@media screen and (max-width:1024px) {
+  .digitaiNativeArt {
+    font-size: xx-large;
+  }
+}
+
+.neon {
+  color: #FFF;
+  animation: flash 2s;
+}
+
+@keyframes flash {
+
+  0%,
+  100% {
+    text-shadow: none
+  }
+
+  50% {
+    text-shadow: 0 0 1.05vw #fff, 0 0 1.1vw #fff;
+  }
+}
+
+.digitaiNativeArtApp {
+  background: black;
+  color: white;
+  font-family: var('--font-roboto-mono');
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+@media screen and (max-width:600px) {
+  .digitaiNativeArtApp button {
+    font-size: large;
+  }
+}
+
+.digitaiNativeArtApp button {
+  width: 100%;
+  color: #FFF;
+  border-color: white;
+  border-width: 1px;
+  background-color: #000 !important;
+  min-width: 500px;
+  min-height: 120px;
+}
+
+@media screen and (max-width:600px) {
+  .digitaiNativeArtApp button {
+    min-width: 300px;
+    min-height: 120px;
+  }
+}
+
+.digitaiNativeArtApp button:disabled {
+  cursor: progress;
+}
+
+#stars {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.star {
+  position: absolute;
+  width: 0.6vw;
+  height: 0.6vw;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  animation: flicker 4s infinite;
+  filter: blur(0.2vw);
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

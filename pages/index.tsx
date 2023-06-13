@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Suspense } from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 import Container from '../components/Container';
 
@@ -34,6 +35,20 @@ export default function Home() {
               />
             </div>
           </div>
+
+          <h3 className='text-gray-700 dark:text-gray-200 mt-4'>Links:</h3>
+          <ul className='text-gray-600 dark:text-gray-400'>
+            <li>
+              Twitter: <a href="https://twitter.com/arandoros">@arandoros</a>
+            </li>
+            <li>
+              GitHub: <a href="https://github.com/avcdsld">@avcdsld</a>
+            </li>
+            <li>
+              Website:{' '}
+              <Link href="https://ara-studio.life">ara-studio.life</Link>
+            </li>
+          </ul>
         </div>
       </Container>
     </Suspense>
