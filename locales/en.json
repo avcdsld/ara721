@@ -79,5 +79,19 @@
     "flowscanDescription": "Smart contract with Cadence language",
     "etherscanDescription": "Smart contract with Solidity language",
     "githubDescription": "Source codes and development environment"
+  },
+  "digitalNativeArt": {
+    "workInfo": "Cadence smart contract, 2023",
+    "abstract": "Code is executable literature. Blockchain creates a completely new digital world where code exists and continues to run. We can create digital-native entities that exist only in this environment. The “Digital Native Art Series” is a group of smart contract works created in a resource-oriented manner to create such an entity.",
+    "digitalNativeArt": "Digital Native Art",
+    "digitalNativeArtDescription": "Anyone can interact with this code to create or destroy objects named `Art` in the digital world.",
+    "shipOfTheseus": "Ship of Theseus",
+    "shipOfTheseusDescription": "Can we say that objects with the same properties but different UUIDs are the same thing? Of the flowing river the flood ever changeth, on the still pool the foam gathering, vanishing, stayeth not. Such too is the lot of men and of the dwellings of men in this world of ours.",
+    "planarias": "Planarias",
+    "planariasDescription": "I have released 100 planarias into the digital world. They have genes and reproduce sexually and asexually to increase their offspring. How far will they be able to survive and increase their diversity without going extinct?"
+  },
+  "implicitAgreement": {
+    "workInfo": "Ethereum DApp, 2023",
+    "abstract": "「Implicit agreement」は、ブロックチェーンや NFT を利用する際に暗黙的に起こっている合意をテーマにした、NFT スマートコントラクトとウェブサイトからなる作品です。ウェブサイトでは誰でも NFT を受け取ることができますが、そのときにあなたはスマートコントラクトの仕様やそこで示されることの解釈について合意をしなければなりません。しかしそれは暗黙的なものであり、内容をすべて理解することは難しいです。"
   }
 }

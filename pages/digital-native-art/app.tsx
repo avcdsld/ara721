@@ -1,5 +1,6 @@
 import sign from '../../lib/signer';
 import { useState, useRef, useEffect } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 import * as fcl from "@onflow/fcl";
 
 const network = 'mainnet';
@@ -7,6 +8,17 @@ const network = 'mainnet';
 export default function DigitalNativeArtApp() {
   const [isLoadingCreation, setIsLoadingCreation] = useState(false);
   const [isLoadingDestruction, setIsLoadingDestruction] = useState(false);
+
+  const notify = (message) => toast(message, {
+    style: {
+      borderRadius: '10px',
+      background: '#111',
+      color: '#fff',
+      fontSize: '2.6vw',
+      minWidth: 500,
+      minHeight: 120,
+    },
+  });
 
   const txInfo = {
     aterilerAddress: '0x8c1f11aac68c6777',
@@ -47,11 +59,16 @@ export default function DigitalNativeArtApp() {
       ]);
       console.log(tx.transactionId);
       const unsub = fcl.tx(tx).subscribe((currentTx) => {
-        console.log(currentTx);
-        if (fcl.tx.isSealed(currentTx)) {
-          console.log('Transaction is Sealed');
-          callback();
-          unsub();
+        try {
+          console.log(currentTx);
+          if (fcl.tx.isSealed(currentTx)) {
+            console.log('Transaction is Sealed');
+            callback();
+            unsub();
+          }
+        } catch (e) {
+          setIsLoadingCreation(false);
+          setIsLoadingDestruction(false);
         }
       });
     } catch (e) {
@@ -72,6 +89,7 @@ transaction {
 }`;
       const callback = () => {
         setIsLoadingCreation(false);
+        notify('Art has been created.');
       }
       await sendTx(txCode, callback);
     } catch (e) {
@@ -93,6 +111,7 @@ transaction {
 }`;
       const callback = () => {
         setIsLoadingDestruction(false);
+        notify('Art has been destroyed.');
       }
       await sendTx(txCode, callback);
     } catch (e) {
@@ -107,7 +126,12 @@ transaction {
   return (
     <div className="digitaiNativeArtApp">
       <div className="h-screen w-screen flex justify-center items-center">
+        <div><Toaster /></div>
         <div className="p-8 mx-auto max-w-screen-xl text-center items-center">
+          <div className="mb-24">
+            <p className="p-8">どなたでもご自由に操作してください。</p>
+            <p>Please feel free to touch this.</p>
+          </div>
           <button
             aria-label="Create Art"
             type="button"

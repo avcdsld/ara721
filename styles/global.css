@@ -276,6 +276,15 @@ a {
   }
 }
 
+.digitaiNativeArtApp p {
+  font-size: x-large;
+}
+
+@media screen and (max-width:600px) {
+  .digitaiNativeArtApp p {
+    font-size: medium;
+  }
+}
 .digitaiNativeArtApp button {
   width: 100%;
   color: #FFF;

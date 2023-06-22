@@ -79,5 +79,19 @@
     "flowscanDescription": "Cadence 言語によるスマートコントラクト",
     "etherscanDescription": "Solidity 言語によるスマートコントラクト",
     "githubDescription": "スマートコントラクトのソースコードや開発環境"
+  },
+  "digitalNativeArt": {
+    "workInfo": "Cadence スマートコントラクト, 2023",
+    "abstract": "コードは実行可能な文学です。ブロックチェーンは、コードが存在し実行され続ける全く新しいデジタル世界をつくります。私たちはこの環境にのみ存在するデジタルネイティブなモノをつくることができます。「Digital Native Art Series」は、そのような存在を生み出すためにリソース指向でつくられたスマートコントラクトの作品群です。",
+    "digitalNativeArt": "Digital Native Art",
+    "digitalNativeArtDescription": "誰もが、このコードとインタラクションして、デジタル世界に「アート」と名付けられたモノを創造でき、また、破壊できます。",
+    "shipOfTheseus": "Ship of Theseus",
+    "shipOfTheseusDescription": "同じプロパティを持つが UUID が異なるオブジェクトは、同じモノだと言えるでしょうか？ゆく河の流れは絶えずして、しかも、もとの水にあらず。淀みに浮かぶうたかたはかつ消えかつ結びて、久しくとどまりたるためしなし。世の中にある人と栖とまたかくのごとし。",
+    "planarias": "Planarias",
+    "planariasDescription": "100匹のプラナリアをデジタル世界に放ちました。彼らは遺伝子を持ち、有性生殖と無性生殖で子孫を増やします。果たして彼らは絶滅せずに生き残り、どこまで多様性を高めることができるでしょうか。"
+  },
+  "implicitAgreement": {
+    "workInfo": "Ethereum DApp, 2023",
+    "abstract": "「Implicit agreement」は、ブロックチェーンや NFT を利用する際に暗黙的に起こっている合意をテーマにした、NFT スマートコントラクトとウェブサイトからなる作品です。ウェブサイトでは誰でも NFT を受け取ることができますが、そのときにあなたはスマートコントラクトの仕様やそこで示されることの解釈について合意をしなければなりません。しかしそれは暗黙的なものであり、内容をすべて理解することは難しいです。"
   }
 }

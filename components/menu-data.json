@@ -24,6 +24,11 @@
       "name": "The NFT",
       "path": "/the-nft",
       "ogpImage": "https://ara721.art/static/images/banner-the-nft.png"
+    },
+    {
+      "name": "Digital Native Art",
+      "path": "/digital-native-art",
+      "ogpImage": "https://ara721.art/static/images/banner-digital-native-art.png"
     }
   ]
 }
