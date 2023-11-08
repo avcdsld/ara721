@@ -100,25 +100,25 @@ export default function Mutation() {
             <li>
               <a
                 target="_blank"
-                href="https://flowscan.org/contract/A.fe437b573d368d6a.Mutation"
+                href="https://www.flowdiver.io/contract/A.fe437b573d368d6a.Mutation?tab=deployments"
                 rel="noreferrer"
               >
-                Flowscan (Contract)
+                Flow Diver (Contract)
               </a>
               <ul>
-                <li>{t('mutation.flowscanDescription1')}</li>
+                <li>{t('mutation.flowdiverDescription1')}</li>
               </ul>
             </li>
             <li>
               <a
                 target="_blank"
-                href="https://flowscan.org/transaction/27e69b0f2cd8472f697337ebd85d846dbf9502c540188b8304e610efb09b4661/script"
+                href="https://www.flowdiver.io/tx/27e69b0f2cd8472f697337ebd85d846dbf9502c540188b8304e610efb09b4661?tab=script"
                 rel="noreferrer"
               >
-                Flowscan (Transaction)
+                Flow Diver (Transaction)
               </a>
               <ul>
-                <li>{t('mutation.flowscanDescription2')}</li>
+                <li>{t('mutation.flowdiverDescription2')}</li>
               </ul>
             </li>
             <li>

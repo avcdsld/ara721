@@ -84,25 +84,25 @@ export default function SelfReplication() {
             <li>
               <a
                 target="_blank"
-                href="https://flowscan.org/contract/A.fe437b573d368d6a.SelfReplication"
+                href="https://www.flowdiver.io/contract/A.fe437b573d368d6a.SelfReplication?tab=deployments"
                 rel="noreferrer"
               >
-                Flowscan (Contract)
+                Flow Diver (Contract)
               </a>
               <ul>
-                <li>{t('selfReplication.flowscanDescription1')}</li>
+                <li>{t('selfReplication.flowdiverDescription1')}</li>
               </ul>
             </li>
             <li>
               <a
                 target="_blank"
-                href="https://flowscan.org/transaction/8370eac87ff425531c3041a7f99aae0bbfc924de87b64d785f3b94f742485670/script"
+                href="https://www.flowdiver.io/tx/8370eac87ff425531c3041a7f99aae0bbfc924de87b64d785f3b94f742485670?tab=script"
                 rel="noreferrer"
               >
-                Flowscan (Transaction)
+                Flow Diver (Transaction)
               </a>
               <ul>
-                <li>{t('selfReplication.flowscanDescription2')}</li>
+                <li>{t('selfReplication.flowdiverDescription2')}</li>
               </ul>
             </li>
             <li>

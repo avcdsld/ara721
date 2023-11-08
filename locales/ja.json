@@ -28,8 +28,8 @@
     "codeDescription": "コードの解説",
     "codeDescriptionDescription": "`SelfReplication` コントラクトは、`name` というコントラクト変数を持ち、これはコントラクトのデプロイ時に決まった文字列に初期化されます。`replicate` 関数はアカウントを引数に取り、そのアカウントの中にコントラクトを追加します。このとき、引数に渡すコードは自身のコードをそのまま受け渡します。自身のコードは、このコントラクトがデプロイされているアカウント（`self.account`）から、コントラクトの名前を指定して取得します。",
     "links": "リンク",
-    "flowscanDescription1": "一番最初にデプロイされたコントラクト",
-    "flowscanDescription2": "コントラクトを複製するためのトランザクション",
+    "flowdiverDescription1": "一番最初にデプロイされたコントラクト",
+    "flowdiverDescription2": "コントラクトを複製するためのトランザクション",
     "githubDescription": "コントラクトやトランザクションのソースコード"
   },
   "mutation": {
@@ -40,8 +40,8 @@
     "codeDescription": "コードの解説",
     "codeDescriptionDescription": "`Mutation` コントラクトは、`mutate()` 関数と `replicate()` 関数を持っています。`mutate()` 関数が呼び出させると、コントラクトの名前を 1 文字書き換える位置を、現在のブロック ID を使って擬似ランダムに決定します（13 行目）。そして、変更した名前の文字列をつくって、コントラクト変数に格納します（14〜24 行目）。26〜29 行目では、自身のコントラクトのコードのうち名前が含まれる箇所を、変更した名前に差し替えて、コントラクト変数に格納しています。その後、`replication()` 関数が呼び出されると、格納済みの名前とコードを、渡させたアカウントの中にデプロイします（33 行目）。",
     "links": "リンク",
-    "flowscanDescription1": "一番最初にデプロイされたコントラクト",
-    "flowscanDescription2": "コントラクトに突然変異を加えるトランザクション",
+    "flowdiverDescription1": "一番最初にデプロイされたコントラクト",
+    "flowdiverDescription2": "コントラクトに突然変異を加えるトランザクション",
     "githubDescription": "コントラクトやトランザクションのソースコード"
   },
   "semi": {
@@ -76,7 +76,7 @@
     "conceptualExpressionDescription1": "次に、Solidity 言語によって作られた NFT について説明します。Ethereum の NFT メタデータ標準に従い、`tokenURI` 関数で指定した ID の NFT のメタデータを返します。この実装では、名前としてその NFT の ID を、画像の URL として、あらかじめ指定した URL の後ろに NFT の ID を付与した文字列を返しています。この構造は実はとても歪です。`tokenURI` 関数を実行してメタデータを取得するには、NFT の ID 情報が必要です。しかし、メタデータの本質が ID だとすると、我々は既に知っている ID 情報を指定して、その同じ ID の情報を取得することになります。いったい我々はこの関数で何を得ようとしているのかわからなくなります。NFT の実体は、スマートコントラクト上にはありません。",
     "conceptualExpressionDescription2": "Solidity の NFT コントラクトにも、text/plain、text/html、image/svg という 3 つのコンテンツタイプで NFT のメタデータを取得できる関数を用意しました。これらを実行する際にも、NFT の ID を指定することになり、関数の内部では引数で渡された ID 情報を使って、それぞれのフォーマットのデータを返します。これらのデータと NFT との紐付けは、どこにもありません。さて、NFT とは何ですか？",
     "links": "リンク",
-    "flowscanDescription": "Cadence 言語によるスマートコントラクト",
+    "flowdiverDescription": "Cadence 言語によるスマートコントラクト",
     "etherscanDescription": "Solidity 言語によるスマートコントラクト",
     "githubDescription": "スマートコントラクトのソースコードや開発環境"
   },

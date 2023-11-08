@@ -28,8 +28,8 @@
     "codeDescription": "Explanation of the code",
     "codeDescriptionDescription": "The `SelfReplication` contract has a contract variable named `name`, which is initialized to a fixed string when the contract is deployed. The `replicate` function takes an account as an argument and adds the contract within that account. In this case, the code passed as the argument is passed as it is. Its own code is taken from the account (`self.account`) where the contract is deployed, specifying the name of the contract.",
     "links": "Links",
-    "flowscanDescription1": "The first deployed contract",
-    "flowscanDescription2": "Transaction to replicate the contract",
+    "flowdiverDescription1": "The first deployed contract",
+    "flowdiverDescription2": "Transaction to replicate the contract",
     "githubDescription": "Source code for the contract and transaction"
   },
   "mutation": {
@@ -40,8 +40,8 @@
     "codeDescription": "Explanation of the code",
     "codeDescriptionDescription": "The `Mutation` contract has `mutate()` function and `replicate()` function. When the `mutate()` function is called, it determines the position at which to rewrite one character of the contract's name, pseudo-randomly, using the current block ID (line 13). In lines 26-29, the part of the code of the contract that contains the name is replaced with the changed name and stored in the contract variable. Then, when the `replication()` function is called, it deploys the stored name and code into the passed account (line 33).",
     "links": "Links",
-    "flowscanDescription1": "The first deployed contract",
-    "flowscanDescription2": "Transaction to mutate the contract",
+    "flowdiverDescription1": "The first deployed contract",
+    "flowdiverDescription2": "Transaction to mutate the contract",
     "githubDescription": "Source code for the contract and transaction"
   },
   "semi": {
@@ -76,7 +76,7 @@
     "conceptualExpressionDescription1": "Next, let's talk about NFTs created by the Solidity language, which follow Ethereum's NFT metadata standard and return metadata for the NFT whose ID is specified by the `tokenURI` function. This implementation returns the NFT's ID as a name and the image URL as a string containing the pre-specified URL followed by the NFT's ID. This structure is actually very distorted. To get metadata by executing the `tokenURI` function, the NFT's ID information is required. But if the essence of metadata is an ID, then we are supposed to specify the ID information we already know and retrieve the information for that same ID. The NFT entity is not on the smart contract.",
     "conceptualExpressionDescription2": "Solidity's NFT contract also provides functions to retrieve NFT metadata for three content types: text/plain, text/html, and image/svg. When executing these functions, the ID of the NFT is also specified, and the functions use the ID information passed as an argument to return data in each format. There is no connection between these data and NFTs anywhere. Now, what is an NFT?",
     "links": "Links",
-    "flowscanDescription": "Smart contract with Cadence language",
+    "flowdiverDescription": "Smart contract with Cadence language",
     "etherscanDescription": "Smart contract with Solidity language",
     "githubDescription": "Source codes and development environment"
   },

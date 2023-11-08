@@ -227,15 +227,15 @@ function dataImageSvg(uint256 tokenId) public pure returns (string memory) {
           <h3>{t('theNft.links')}</h3>
           <ul className="text-gray-600 dark:text-gray-400 mb-8">
             <li>
-              {t('theNft.flowscanDescription')}
+              {t('theNft.flowdiverDescription')}
               <ul>
                 <li>
                   <a
                     target="_blank"
-                    href="https://flowscan.org/contract/A.fe437b573d368d6a.TheNFT/overview"
+                    href="https://www.flowdiver.io/contract/A.fe437b573d368d6a.TheNFT?tab=deployments"
                     rel="noreferrer"
                   >
-                    Flowscan
+                    Flow Diver
                   </a>
                 </li>
               </ul>
