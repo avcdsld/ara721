@@ -23,7 +23,7 @@ export default function DigitalNativeArtApp() {
   const txInfo = {
     aterilerAddress: '0x8c1f11aac68c6777',
     senderAddress: '0x8c1f11aac68c6777',
-    senderKeyId: 1,
+    senderKeyId: 2,
   };
 
   const sendTx = async (txCode, callback) => {
