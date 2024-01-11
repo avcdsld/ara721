@@ -2,12 +2,8 @@ import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 import Container from 'components/Container';
 import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { swift, solidity } from 'react-syntax-highlighter/dist/cjs/languages/prism';
 import { a11yDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import useWindowSize from 'hooks/useWindowSize';
-
-SyntaxHighlighter.registerLanguage('swift', swift);
-SyntaxHighlighter.registerLanguage('solidity', solidity);
 
 export default function TheNFT() {
   const { t } = useTranslation();
@@ -130,7 +126,7 @@ function dataImageSvg(uint256 tokenId) public pure returns (string memory) {
 
           {width && (
             <SyntaxHighlighter
-              language={'swift'}
+              language={'plaintext'}
               style={a11yDark}
               // showLineNumbers
               layout="responsive"
@@ -148,7 +144,7 @@ function dataImageSvg(uint256 tokenId) public pure returns (string memory) {
 
           {width && (
             <SyntaxHighlighter
-              language={'swift'}
+              language={'plaintext'}
               style={a11yDark}
               // showLineNumbers
               layout="responsive"
@@ -192,7 +188,7 @@ function dataImageSvg(uint256 tokenId) public pure returns (string memory) {
 
           {width && (
             <SyntaxHighlighter
-              language={'solidity'}
+              language={'plaintext'}
               style={a11yDark}
               // showLineNumbers
               layout="responsive"
@@ -210,7 +206,7 @@ function dataImageSvg(uint256 tokenId) public pure returns (string memory) {
 
           {width && (
             <SyntaxHighlighter
-              language={'solidity'}
+              language={'plaintext'}
               style={a11yDark}
               // showLineNumbers
               layout="responsive"

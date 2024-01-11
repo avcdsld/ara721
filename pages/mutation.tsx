@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Container from 'components/Container';
 import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { swift } from 'react-syntax-highlighter/dist/cjs/languages/prism';
-import { synthwave84 } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { a11yDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import useWindowSize from 'hooks/useWindowSize';
 
 SyntaxHighlighter.registerLanguage('swift', swift);
@@ -81,8 +81,8 @@ export default function Mutation() {
 
           {width && (
             <SyntaxHighlighter
-              language={'swift'}
-              style={synthwave84}
+              language={'plaintext'}
+              style={a11yDark}
               showLineNumbers
               layout="responsive"
               customStyle={{
