@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import Container from 'components/Container';
-import avatar from 'public/avatar.jpg';
+import avatar from 'public/avatar.png';
 
 export default function About() {
   return (
