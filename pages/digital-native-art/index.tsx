@@ -283,10 +283,10 @@ pub contract Planarias {
   return (
     <Container title="Digital Native Art Series – ara721.art">
       <div className="justify-center max-w-2xl mx-auto mb-16">
-        <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
+        <h1 className="font-bold text-2xl md:text-4xl mb-4 text-black dark:text-gray-200">
           Digital Native Art Series
         </h1>
-        <h3 className="mb-4 text-black dark:text-white">
+        <h3 className="mb-4 text-black dark:text-gray-200">
           {t('digitalNativeArt.workInfo')}
         </h3>
         <Image
@@ -296,7 +296,7 @@ pub contract Planarias {
           src="/static/images/digital-native-art.png"
           className="mt-4 mb-8"
         />
-        <p className="text-gray-600 dark:text-gray-400 mb-8">
+        <p className="text-gray-600 dark:text-gray-200 mb-8 prose">
           {t('digitalNativeArt.abstract')}
         </p>
 
@@ -304,10 +304,10 @@ pub contract Planarias {
           <hr />
 
           <h3>{t('digitalNativeArt.digitalNativeArt')}</h3>
-          <p className="text-gray-600 dark:text-gray-400 mb-4">
+          <p className="text-gray-600 dark:text-gray-200 mb-4">
             {t('digitalNativeArt.digitalNativeArtDescription')}
           </p>
-          <button className="text-gray-600 dark:text-gray-400" onClick={() => { setShowCode1(!showCode1); }}>
+          <button className="text-gray-600 dark:text-gray-200" onClick={() => { setShowCode1(!showCode1); }}>
             {showCode1 ? '-- ' : '+ show code'}
           </button>
           {width && showCode1 && (
@@ -337,9 +337,9 @@ pub contract Planarias {
               </SyntaxHighlighter>
             </>
           )}
-          <p className="text-gray-600 dark:text-gray-400">
+          <p className="text-gray-600 dark:text-gray-200">
             <a
-              className="text-gray-600 dark:text-gray-400"
+              className="text-gray-600 dark:text-gray-200"
               style={{ textDecoration: 'none' }}
               target="_blank"
               href="https://www.flowdiver.io/contract/A.a19cf4dba5941530.DigitalNativeArt?tab=deployments"
@@ -351,10 +351,10 @@ pub contract Planarias {
 
 
           <h3>{t('digitalNativeArt.shipOfTheseus')}</h3>
-          <p className="text-gray-600 dark:text-gray-400 mb-4">
+          <p className="text-gray-600 dark:text-gray-200 mb-4">
             {t('digitalNativeArt.shipOfTheseusDescription')}
           </p>
-          <button className="text-gray-600 dark:text-gray-400" onClick={() => { setShowCode2(!showCode2); }}>
+          <button className="text-gray-600 dark:text-gray-200" onClick={() => { setShowCode2(!showCode2); }}>
             {showCode2 ? '--' : '+ show code'}
           </button>
           {width && showCode2 && (
@@ -369,9 +369,9 @@ pub contract Planarias {
               {code2}
             </SyntaxHighlighter>
           )}
-          <p className="text-gray-600 dark:text-gray-400">
+          <p className="text-gray-600 dark:text-gray-200">
             <a
-              className="text-gray-600 dark:text-gray-400"
+              className="text-gray-600 dark:text-gray-200"
               style={{ textDecoration: 'none' }}
               target="_blank"
               href="https://www.flowdiver.io/contract/A.569087b50ab30c2a.ShipOfTheseus?tab=deployments"
@@ -382,10 +382,10 @@ pub contract Planarias {
           </p>
 
           <h3>{t('digitalNativeArt.planarias')}</h3>
-          <p className="text-gray-600 dark:text-gray-400 mb-4">
+          <p className="text-gray-600 dark:text-gray-200 mb-4">
             {t('digitalNativeArt.planariasDescription')}
           </p>
-          <button className="text-gray-600 dark:text-gray-400" onClick={() => { setShowCode3(!showCode3); }}>
+          <button className="text-gray-600 dark:text-gray-200" onClick={() => { setShowCode3(!showCode3); }}>
             {showCode3 ? '--' : '+ show code'}
           </button>
           {width && showCode3 && (
@@ -400,9 +400,9 @@ pub contract Planarias {
               {code3}
             </SyntaxHighlighter>
           )}
-          <p className="text-gray-600 dark:text-gray-400">
+          <p className="text-gray-600 dark:text-gray-200">
             <a
-              className="text-gray-600 dark:text-gray-400"
+              className="text-gray-600 dark:text-gray-200"
               style={{ textDecoration: 'none' }}
               target="_blank"
               href="https://www.flowdiver.io/contract/A.d370ae493b8acc86.Planarias?tab=deployments"

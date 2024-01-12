@@ -93,13 +93,13 @@ function dataImageSvg(uint256 tokenId) public pure returns (string memory) {
   return (
     <Container title="The NFT – ara721.art">
       <div className="justify-center max-w-2xl mx-auto mb-16">
-        <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
+        <h1 className="font-bold text-2xl md:text-4xl mb-4 text-black dark:text-gray-200">
           The NFT
         </h1>
-        <h2 className="font-bold text-2xl md:text-3xl tracking-tight mb-4 text-black dark:text-white">
+        <h2 className="font-bold text-2xl md:text-3xl mb-4 text-black dark:text-gray-200">
           {t('theNft.subTitle')}
         </h2>
-        <h3 className="mb-4 text-black dark:text-white">
+        <h3 className="mb-4 text-black dark:text-gray-200">
           {t('theNft.workInfo')}
         </h3>
         <Image
@@ -109,18 +109,18 @@ function dataImageSvg(uint256 tokenId) public pure returns (string memory) {
           src="/static/images/the-nft.png"
           className="mt-4 mb-8"
         />
-        <p className="text-gray-600 dark:text-gray-400 mb-8">
+        <p className="text-gray-600 dark:text-gray-200 mb-8 prose">
           {t('theNft.abstract')}
         </p>
 
         <div className="mb-8 prose dark:prose-dark leading-6">
           <h3>{t('theNft.whatIsNFT')}</h3>
-          <p className="text-gray-600 dark:text-gray-400 mb-8">
+          <p className="text-gray-600 dark:text-gray-200 mb-8">
             {t('theNft.whatIsNFTDescription')}
           </p>
 
           <h3>{t('theNft.objectLikeExpression')}</h3>
-          <p className="text-gray-600 dark:text-gray-400 mb-8">
+          <p className="text-gray-600 dark:text-gray-200 mb-8">
             {t('theNft.objectLikeExpressionDescription1')}
           </p>
 
@@ -138,7 +138,7 @@ function dataImageSvg(uint256 tokenId) public pure returns (string memory) {
             </SyntaxHighlighter>
           )}
 
-          <p className="text-gray-600 dark:text-gray-400 mb-8">
+          <p className="text-gray-600 dark:text-gray-200 mb-8">
             {t('theNft.objectLikeExpressionDescription2')}
           </p>
 
@@ -156,7 +156,7 @@ function dataImageSvg(uint256 tokenId) public pure returns (string memory) {
             </SyntaxHighlighter>
           )}
 
-          <p className="text-gray-600 dark:text-gray-400 mb-8">
+          <p className="text-gray-600 dark:text-gray-200 mb-8">
             {t('theNft.objectLikeExpressionDescription3')}
           </p>
 
@@ -177,12 +177,12 @@ function dataImageSvg(uint256 tokenId) public pure returns (string memory) {
             style={{ border: 'solid 1px #777777' }}
           />
           
-          <p className="text-gray-600 dark:text-gray-400 mb-8">
+          <p className="text-gray-600 dark:text-gray-200 mb-8">
             {t('theNft.objectLikeExpressionDescription4')}
           </p>
 
           <h3>{t('theNft.conceptualExpression')}</h3>
-          <p className="text-gray-600 dark:text-gray-400 mb-8">
+          <p className="text-gray-600 dark:text-gray-200 mb-8">
             {t('theNft.conceptualExpressionDescription1')}
           </p>
 
@@ -200,7 +200,7 @@ function dataImageSvg(uint256 tokenId) public pure returns (string memory) {
             </SyntaxHighlighter>
           )}
 
-          <p className="text-gray-600 dark:text-gray-400 mb-8">
+          <p className="text-gray-600 dark:text-gray-200 mb-8">
             {t('theNft.conceptualExpressionDescription2')}
           </p>
 
@@ -221,7 +221,7 @@ function dataImageSvg(uint256 tokenId) public pure returns (string memory) {
           <hr />
 
           <h3>{t('theNft.links')}</h3>
-          <ul className="text-gray-600 dark:text-gray-400 mb-8">
+          <ul className="text-gray-600 dark:text-gray-200 mb-8">
             <li>
               {t('theNft.flowdiverDescription')}
               <ul>

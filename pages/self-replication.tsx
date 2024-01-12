@@ -27,10 +27,10 @@ export default function SelfReplication() {
   return (
     <Container title="Self-Replication – ara721.art">
       <div className="justify-center max-w-2xl mx-auto mb-16">
-        <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
+        <h1 className="font-bold text-2xl md:text-4xl mb-4 text-black dark:text-gray-200">
           Self-Replication
         </h1>
-        <h3 className="mb-4 text-black dark:text-white">
+        <h3 className="mb-4 text-black dark:text-gray-200">
           {t('selfReplication.workInfo')}
         </h3>
         <Image
@@ -40,23 +40,23 @@ export default function SelfReplication() {
           src="/static/images/self-replication.png"
           className="mt-4 mb-8"
         />
-        <p className="text-gray-600 dark:text-gray-400 mb-8">
+        <p className="text-gray-600 dark:text-gray-200 mb-8 prose">
           {t('selfReplication.abstract')}
         </p>
 
         <div className="mb-8 prose dark:prose-dark leading-6">
           <h3>{t('selfReplication.codeExecution')}</h3>
-          <p className="text-gray-600 dark:text-gray-400 mb-8">
+          <p className="text-gray-600 dark:text-gray-200 mb-8">
             {t('selfReplication.codeExecutionDescription')}
           </p>
 
           <h3>{t('selfReplication.codeIncubator')}</h3>
-          <p className="text-gray-600 dark:text-gray-400 mb-8">
+          <p className="text-gray-600 dark:text-gray-200 mb-8">
             {t('selfReplication.codeIncubatorDescription')}
           </p>
 
           <h3>{t('selfReplication.codeDescription')}</h3>
-          <p className="text-gray-600 dark:text-gray-400 mb-8">
+          <p className="text-gray-600 dark:text-gray-200 mb-8">
             {t('selfReplication.codeDescriptionDescription')}
           </p>
 
@@ -76,7 +76,7 @@ export default function SelfReplication() {
           <hr />
 
           <h3>{t('selfReplication.links')}</h3>
-          <ul className="text-gray-600 dark:text-gray-400 mb-8">
+          <ul className="text-gray-600 dark:text-gray-200 mb-8">
             <li>
               <a
                 target="_blank"

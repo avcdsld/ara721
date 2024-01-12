@@ -20,7 +20,7 @@ function NavItem({ href, text }) {
       className={cn(
         isActive
           ? 'font-semibold text-gray-800 dark:text-gray-200'
-          : 'font-normal text-gray-600 dark:text-gray-400',
+          : 'font-normal text-gray-600 dark:text-gray-200',
         'hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all'
       )}
     >
@@ -96,16 +96,18 @@ export default function Container(props) {
               return <NavItem key={index} href={work.path} text={work.name} />;
             })}
           </div>
-          <button
-            aria-label="Change Language"
-            type="button"
-            className="w-20 h-9 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all"
-            onClick={() =>
-              changeLang(i18n.resolvedLanguage === 'en' ? 'ja' : 'en')
-            }
-          >
-            {mounted && (i18n.resolvedLanguage === 'en' ? '日本語' : 'English')}
-          </button>
+          <div className='w-20'>
+            <button
+              aria-label="Change Language"
+              type="button"
+              className="w-24 h-9 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300 transition-all"
+              onClick={() =>
+                changeLang(i18n.resolvedLanguage === 'en' ? 'ja' : 'en')
+              }
+            >
+              {mounted && (i18n.resolvedLanguage === 'en' ? '日本語' : 'English')}
+            </button>
+          </div>
           {/* <button
             aria-label="Toggle Dark Mode"
             type="button"

@@ -64,7 +64,7 @@
   "theNft": {
     "subTitle": "― What makes an NFT an NFT?",
     "workInfo": "NFT コントラクト, Cadence and Solidity, 2023",
-    "abstract": "「The NFT」は、NFT の本質を問う 2 つのスマートコントラクトから成る作品です。ひとつは、リソース指向のプログラミング言語である Cadence を使った NFT コントラクト、もうひとつは、現在最も普及しているスマートコントラクト言語であるSolidity を使った NFT コントラクトです。",
+    "abstract": "「The NFT」は、NFT の本質を問う 2 つのスマートコントラクトから成る作品です。ひとつは、リソース指向のプログラミング言語である Cadence を使った NFT コントラクト、もうひとつは、現在最も普及しているスマートコントラクト言語である Solidity を使った NFT コントラクトです。",
     "whatIsNFT": "NFT を NFT たらしめるもの",
     "whatIsNFTDescription": "この NFT が返す最も重要なメタデータは「ID」です。それは単純に、このコントラクトの中で順番に採番された数値です。NFT には画像など様々な情報を紐づけることができますが、その紐付けが一意であることは証明できません。本質的にその NFT を NFT たらしめるものは、そのスマートコントラクトの中で生成された、アイデンティティを示す数字だけである可能性があります。",
     "objectLikeExpression": "オブジェクト的な表現",

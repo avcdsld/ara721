@@ -7,7 +7,7 @@ export default function ImplicitAgreementApp() {
   return (
     <div className="full">
       <div className="justify-center max-w-2xl mx-auto p-16">
-        <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-8">
+        <h1 className="font-bold text-2xl md:text-4xl mb-8">
           IMPLICIT AGREEMENT
         </h1>
 

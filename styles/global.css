@@ -229,7 +229,7 @@ a {
 .digitaiNativeArt {
   background: black;
   color: white;
-  font-family: var('--font-roboto-mono');
+  font-family: 'Roboto Mono', monospace;
   font-weight: bold;
   font-size: 7vw;
   position: fixed;
@@ -265,7 +265,7 @@ a {
 .digitaiNativeArtApp {
   background: black;
   color: white;
-  font-family: var('--font-roboto-mono');
+  font-family: 'Roboto Mono', monospace;
   font-weight: bold;
   font-size: xx-large;
 }

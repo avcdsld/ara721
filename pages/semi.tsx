@@ -8,47 +8,47 @@ export default function Semi() {
   return (
     <Container title="Semi – ara721.art">
       <div className="justify-center max-w-2xl mx-auto mb-16">
-        <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-2 text-black dark:text-white">
+        <h1 className="font-bold text-2xl md:text-4xl mb-2 text-black dark:text-gray-200">
           Semi
         </h1>
-        <h3 className="mb-4 text-black dark:text-white">
+        <h3 className="mb-4 text-black dark:text-gray-200">
           {t('semi.workInfo')}
         </h3>
 
-        <p className="text-gray-600 dark:text-gray-400 mb-2 text-sm">
+        <p className="text-gray-600 dark:text-gray-200 mb-2 text-sm">
           {t('semi.demoNote')}
         </p>
         <SemiSvg />
 
-        <p className="text-gray-600 dark:text-gray-400 mb-8">
+        <p className="text-gray-600 dark:text-gray-200 mb-8 prose">
           {t('semi.abstract')}
         </p>
 
         <div className="mb-8 prose dark:prose-dark leading-6">
           <h3>{t('semi.affectEachOthers')}</h3>
-          <p className="text-gray-600 dark:text-gray-400 mb-8">
+          <p className="text-gray-600 dark:text-gray-200 mb-8">
             {t('semi.affectEachOthersDescription')}
           </p>
 
           <h3>{t('semi.interactive')}</h3>
-          <p className="text-gray-600 dark:text-gray-400 mb-8">
+          <p className="text-gray-600 dark:text-gray-200 mb-8">
             {t('semi.interactiveDescription')}
           </p>
 
           <h3>{t('semi.composability')}</h3>
-          <p className="text-gray-600 dark:text-gray-400 mb-8">
+          <p className="text-gray-600 dark:text-gray-200 mb-8">
             {t('semi.composabilityDescription')}
           </p>
 
           <h3>{t('semi.betterMetadata')}</h3>
-          <p className="text-gray-600 dark:text-gray-400 mb-8">
+          <p className="text-gray-600 dark:text-gray-200 mb-8">
             {t('semi.betterMetadataDescription')}
           </p>
 
           <hr />
 
           <h3>{t('semi.links')}</h3>
-          <ul className="text-gray-600 dark:text-gray-400 mb-8">
+          <ul className="text-gray-600 dark:text-gray-200 mb-8">
             <li>
               <a
                 target="_blank"

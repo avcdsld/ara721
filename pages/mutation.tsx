@@ -51,10 +51,10 @@ export default function Mutation() {
   return (
     <Container title="Mutation – ara721.art">
       <div className="justify-center max-w-2xl mx-auto mb-16">
-        <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
+        <h1 className="font-bold text-2xl md:text-4xl mb-4 text-black dark:text-gray-200">
           Mutation
         </h1>
-        <h3 className="mb-4 text-black dark:text-white">
+        <h3 className="mb-4 text-black dark:text-gray-200">
           {t('mutation.workInfo')}
         </h3>
         <Image
@@ -64,18 +64,18 @@ export default function Mutation() {
           src="/static/images/mutation.png"
           className="mt-4 mb-8"
         />
-        <p className="text-gray-600 dark:text-gray-400 mb-8">
+        <p className="text-gray-600 dark:text-gray-200 mb-8 prose">
           {t('mutation.abstract')}
         </p>
 
         <div className="mb-8 prose dark:prose-dark leading-6">
           <h3>{t('mutation.meaning')}</h3>
-          <p className="text-gray-600 dark:text-gray-400 mb-8">
+          <p className="text-gray-600 dark:text-gray-200 mb-8">
             {t('mutation.meaningDescription')}
           </p>
 
           <h3>{t('mutation.codeDescription')}</h3>
-          <p className="text-gray-600 dark:text-gray-400 mb-8">
+          <p className="text-gray-600 dark:text-gray-200 mb-8">
             {t('mutation.codeDescriptionDescription')}
           </p>
 
@@ -96,7 +96,7 @@ export default function Mutation() {
           <hr />
 
           <h3>{t('mutation.links')}</h3>
-          <ul className="text-gray-600 dark:text-gray-400 mb-8">
+          <ul className="text-gray-600 dark:text-gray-200 mb-8">
             <li>
               <a
                 target="_blank"
