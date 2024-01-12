@@ -36,7 +36,7 @@ export default function Home() {
             </div>
           </div>
 
-          <h3 className='text-gray-700 dark:text-gray-200 mt-4'>Links:</h3>
+          <h3 className='text-gray-700 dark:text-gray-200 mt-4'>Links;</h3>
           <ul className='text-gray-600 dark:text-gray-200'>
             <li>
               Twitter: <a href="https://twitter.com/arandoros">@arandoros</a>
