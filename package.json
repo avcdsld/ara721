@@ -9,7 +9,6 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@noble/curves": "^2.3.0",
     "@onflow/fcl": "^1.21.11",
     "classnames": "^2.5.1",
     "i18next": "^26.3.6",
@@ -20,8 +19,7 @@
     "react-dom": "^19.2.8",
     "react-hot-toast": "^2.6.0",
     "react-i18next": "^17.0.11",
-    "react-syntax-highlighter": "^16.1.1",
-    "sha3": "^2.1.4"
+    "react-syntax-highlighter": "^16.1.1"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.20",

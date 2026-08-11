@@ -1,5 +1,4 @@
-import sign from '../../lib/signer';
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import * as fcl from "@onflow/fcl";
 
@@ -20,108 +19,78 @@ export default function DigitalNativeArtApp() {
     },
   });
 
-  const txInfo = {
-    aterilerAddress: '0x8c1f11aac68c6777',
-    senderAddress: '0x8c1f11aac68c6777',
-    senderKeyId: 2,
-  };
-
-  const sendTx = async (txCode, callback) => {
+  // The signing key lives on the server (see functions/). The browser only asks
+  // for one of two named actions and then watches the resulting transaction.
+  const sendTx = async (action, callback, onFailure) => {
     try {
       fcl.config({
         "accessNode.api": network === "mainnet" ? "https://rest-mainnet.onflow.org" : "https://rest-testnet.onflow.org",
         "fcl.network": network || "testnet",
       });
-      const authz = async (account) => {
-        const addr = txInfo.senderAddress;
-        const keyId = txInfo.senderKeyId;
-        return {
-          ...account,
-          tempId: `${addr}-${keyId}`,
-          addr: fcl.sansPrefix(addr),
-          keyId: Number(keyId),
-          signingFunction: async (signable) => {
-            return {
-              addr: fcl.withPrefix(addr),
-              keyId: Number(keyId),
-              signature: sign(signable.message)
-            }
-          }
+
+      const res = await fetch('/api/art', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action })
+      });
+
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
+        if (res.status === 429) {
+          notify(
+            body.limit === 'daily'
+              ? "Today's limit has been reached. Please come back tomorrow."
+              : 'Too many requests. Please wait a moment.'
+          );
+        } else {
+          notify('Something went wrong. Please try again later.');
         }
-      };
-      const tx = await fcl.send([
-        fcl.transaction(txCode),
-        fcl.args([]),
-        fcl.payer(authz),
-        fcl.proposer(authz),
-        fcl.authorizations([authz]),
-        fcl.limit(9999)
-      ]);
-      console.log(tx.transactionId);
-      const unsub = fcl.tx(tx).subscribe((currentTx) => {
+        onFailure();
+        return;
+      }
+
+      const { transactionId } = await res.json();
+      const unsub = fcl.tx(transactionId).subscribe((currentTx) => {
         try {
-          console.log(currentTx);
           if (fcl.tx.isSealed(currentTx)) {
-            console.log('Transaction is Sealed');
             callback();
             unsub();
           }
         } catch (e) {
-          setIsLoadingCreation(false);
-          setIsLoadingDestruction(false);
+          onFailure();
+          unsub();
         }
       });
     } catch (e) {
       console.log(e);
+      notify('Something went wrong. Please try again later.');
+      onFailure();
     }
   };
 
   const createArt = async () => {
-    try {
-      setIsLoadingCreation(true);
-      const txCode = `\
-import Atelier from ${txInfo.aterilerAddress}
-
-transaction {
-    prepare(signer: AuthAccount) {
-        Atelier.createArt()
-    }
-}`;
-      const callback = () => {
+    setIsLoadingCreation(true);
+    await sendTx(
+      'create',
+      () => {
         setIsLoadingCreation(false);
         notify('Art has been created.');
-      }
-      await sendTx(txCode, callback);
-    } catch (e) {
-      console.log(e);
-    }
+      },
+      () => setIsLoadingCreation(false)
+    );
   }
 
   const destroyArt = async () => {
-    try {
-      setIsLoadingDestruction(true);
-      const txCode = `\
-import Atelier from ${txInfo.aterilerAddress}
-
-transaction {
-    prepare(signer: AuthAccount) {
-        let uuids = Atelier.getUUIDs()
-        Atelier.destroyArt(uuid: uuids[0])
-    }
-}`;
-      const callback = () => {
+    setIsLoadingDestruction(true);
+    await sendTx(
+      'destroy',
+      () => {
         setIsLoadingDestruction(false);
         notify('Art has been destroyed.');
-      }
-      await sendTx(txCode, callback);
-    } catch (e) {
-      console.log(e);
-      setIsLoadingDestruction(false);
-    }
+      },
+      () => setIsLoadingDestruction(false)
+    );
   }
-
-  useEffect(() => {
-  }, []);
 
   return (
     <div className="digitaiNativeArtApp">

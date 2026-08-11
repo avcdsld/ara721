@@ -1,0 +1,12 @@
+rules_version = '2';
+
+// The rate-limit counters are written only by the `art` Cloud Function, which
+// uses the Admin SDK and bypasses these rules. No client may read or write
+// anything in this database.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
