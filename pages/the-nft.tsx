@@ -231,7 +231,7 @@ function dataImageSvg(uint256 tokenId) public pure returns (string memory) {
                     href="https://www.flowscan.io/contract/A.fe437b573d368d6a.TheNFT?tab=deployments"
                     rel="noreferrer"
                   >
-                    Flow Diver
+                    Flowscan
                   </a>
                 </li>
               </ul>
