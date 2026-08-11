@@ -1,20 +1,26 @@
 import { SHA3 } from 'sha3';
-import { ec } from 'elliptic';
-const EC = new ec('secp256k1');
+import { secp256k1 } from '@noble/curves/secp256k1.js';
 
 const PRIVATE_KEY = process.env.NEXT_PUBLIC_PRIVATE_KEY;
 
+// `prehash: false` because the message is already a SHA3-256 digest, and
+// `lowS: false` to keep the signatures byte-compatible with the previous
+// elliptic-based implementation.
+const SIGN_OPTS = { lowS: false, prehash: false };
+
 export default function sign(message) {
-    const key = EC.keyFromPrivate(Buffer.from(PRIVATE_KEY, 'hex'));
-    const sig = key.sign(hash(message)); // hashMsgHex -> hash
-    const n = 32;
-    const r = sig.r.toArrayLike(Buffer, 'be', n);
-    const s = sig.s.toArrayLike(Buffer, 'be', n);
-    return Buffer.concat([r, s]).toString('hex');
+  const sig = secp256k1.sign(hash(message), hexToBytes(PRIVATE_KEY), SIGN_OPTS);
+  return bytesToHex(sig);
 }
 
 const hash = (message) => {
-    const sha = new SHA3(256);
-    sha.update(Buffer.from(message, 'hex'));
-    return sha.digest();
-}
+  const sha = new SHA3(256);
+  sha.update(Buffer.from(message, 'hex'));
+  return new Uint8Array(sha.digest());
+};
+
+const hexToBytes = (hex) =>
+  Uint8Array.from(hex.match(/.{1,2}/g).map((b) => parseInt(b, 16)));
+
+const bytesToHex = (bytes) =>
+  Array.from(bytes, (b: number) => b.toString(16).padStart(2, '0')).join('');

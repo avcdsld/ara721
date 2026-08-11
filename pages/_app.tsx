@@ -3,7 +3,7 @@ import 'styles/global.css';
 import { I18nextProvider } from 'react-i18next';
 import i18n, { init } from '../lib/i18n';
 import { ThemeProvider } from 'next-themes';
-import { Roboto_Mono, Noto_Serif } from '@next/font/google';
+import { Roboto_Mono, Noto_Serif } from 'next/font/google';
 
 const notoSerif = Noto_Serif({
   weight: "400",
@@ -17,10 +17,7 @@ const robotoMono = Roboto_Mono({
   subsets: ['latin'],
 });
 
-export default function App({
-  Component,
-  pageProps: { session, ...pageProps }
-}) {
+export default function App({ Component, pageProps }) {
   init();
 
   return (

@@ -34,6 +34,9 @@ export default function Container(props) {
   // const { resolvedTheme, setTheme } = useTheme();
   const { t, i18n } = useTranslation();
 
+  // Deliberate: language-dependent labels must not be rendered until after
+  // hydration, otherwise the server HTML and the client disagree.
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => setMounted(true), []);
 
   const changeLang = (lang) => {
