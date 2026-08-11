@@ -34,7 +34,7 @@
     "react-hot-toast": "^2.4.1",
     "react-i18next": "^12.1.4",
     "react-syntax-highlighter": "^15.5.0",
-    "sanity": "dev-preview",
+    "sanity": "3.0.0-rc.3",
     "sanity-plugin-markdown": "^3.0.0-v3-studio.0",
     "sha3": "^2.1.4",
     "styled-components": "^5.3.6",
