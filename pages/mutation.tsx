@@ -100,7 +100,7 @@ export default function Mutation() {
             <li>
               <a
                 target="_blank"
-                href="https://www.flowdiver.io/contract/A.fe437b573d368d6a.Mutation?tab=deployments"
+                href="https://www.flowscan.io/contract/A.fe437b573d368d6a.Mutation?tab=deployments"
                 rel="noreferrer"
               >
                 Flow Diver (Contract)
@@ -112,7 +112,7 @@ export default function Mutation() {
             <li>
               <a
                 target="_blank"
-                href="https://www.flowdiver.io/tx/27e69b0f2cd8472f697337ebd85d846dbf9502c540188b8304e610efb09b4661?tab=script"
+                href="https://www.flowscan.io/tx/27e69b0f2cd8472f697337ebd85d846dbf9502c540188b8304e610efb09b4661?tab=script"
                 rel="noreferrer"
               >
                 Flow Diver (Transaction)

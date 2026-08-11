@@ -80,7 +80,7 @@ export default function SelfReplication() {
             <li>
               <a
                 target="_blank"
-                href="https://www.flowdiver.io/contract/A.fe437b573d368d6a.SelfReplication?tab=deployments"
+                href="https://www.flowscan.io/contract/A.fe437b573d368d6a.SelfReplication?tab=deployments"
                 rel="noreferrer"
               >
                 Flow Diver (Contract)
@@ -92,7 +92,7 @@ export default function SelfReplication() {
             <li>
               <a
                 target="_blank"
-                href="https://www.flowdiver.io/tx/8370eac87ff425531c3041a7f99aae0bbfc924de87b64d785f3b94f742485670?tab=script"
+                href="https://www.flowscan.io/tx/8370eac87ff425531c3041a7f99aae0bbfc924de87b64d785f3b94f742485670?tab=script"
                 rel="noreferrer"
               >
                 Flow Diver (Transaction)

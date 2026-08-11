@@ -342,7 +342,7 @@ pub contract Planarias {
               className="text-gray-600 dark:text-gray-200"
               style={{ textDecoration: 'none' }}
               target="_blank"
-              href="https://www.flowdiver.io/contract/A.a19cf4dba5941530.DigitalNativeArt?tab=deployments"
+              href="https://www.flowscan.io/contract/A.a19cf4dba5941530.DigitalNativeArt?tab=deployments"
               rel="noreferrer"
             >
               {'> deployed contract'}
@@ -374,7 +374,7 @@ pub contract Planarias {
               className="text-gray-600 dark:text-gray-200"
               style={{ textDecoration: 'none' }}
               target="_blank"
-              href="https://www.flowdiver.io/contract/A.569087b50ab30c2a.ShipOfTheseus?tab=deployments"
+              href="https://www.flowscan.io/contract/A.569087b50ab30c2a.ShipOfTheseus?tab=deployments"
               rel="noreferrer"
             >
               {'> deployed contract'}
@@ -405,7 +405,7 @@ pub contract Planarias {
               className="text-gray-600 dark:text-gray-200"
               style={{ textDecoration: 'none' }}
               target="_blank"
-              href="https://www.flowdiver.io/contract/A.d370ae493b8acc86.Planarias?tab=deployments"
+              href="https://www.flowscan.io/contract/A.d370ae493b8acc86.Planarias?tab=deployments"
               rel="noreferrer"
             >
               {'> deployed contract'}
