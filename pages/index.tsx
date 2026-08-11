@@ -39,13 +39,19 @@ export default function Home() {
           <h3 className='text-gray-700 dark:text-gray-200 mt-4'>Links;</h3>
           <ul className='text-gray-600 dark:text-gray-200'>
             <li>
-              Twitter: <a href="https://twitter.com/arandoros">@arandoros</a>
+              X: <a href="https://x.com/arandoros">@arandoros</a>
             </li>
             <li>
               GitHub: <a href="https://github.com/avcdsld">@avcdsld</a>
             </li>
             <li>
               Website:{' '}
+              <Link href="https://zeroichiarakawa.com">
+                zeroichiarakawa.com
+              </Link>
+            </li>
+            <li>
+              Website (old, archived):{' '}
               <Link href="https://ara-studio.life">ara-studio.life</Link>
             </li>
           </ul>

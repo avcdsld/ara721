@@ -223,7 +223,7 @@ function dataImageSvg(uint256 tokenId) public pure returns (string memory) {
           <h3>{t('theNft.links')}</h3>
           <ul className="text-gray-600 dark:text-gray-200 mb-8">
             <li>
-              {t('theNft.flowdiverDescription')}
+              {t('theNft.flowscanDescription')}
               <ul>
                 <li>
                   <a

@@ -106,7 +106,7 @@ export default function Mutation() {
                 Flowscan (Contract)
               </a>
               <ul>
-                <li>{t('mutation.flowdiverDescription1')}</li>
+                <li>{t('mutation.flowscanDescription1')}</li>
               </ul>
             </li>
             <li>
@@ -118,7 +118,7 @@ export default function Mutation() {
                 Flowscan (Transaction)
               </a>
               <ul>
-                <li>{t('mutation.flowdiverDescription2')}</li>
+                <li>{t('mutation.flowscanDescription2')}</li>
               </ul>
             </li>
             <li>

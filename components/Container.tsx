@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
-// import { useTheme } from 'next-themes';
 import { useTranslation } from 'react-i18next';
 import Head from 'next/head';
 import NextLink from 'next/link';
@@ -31,7 +30,6 @@ function NavItem({ href, text }) {
 
 export default function Container(props) {
   const [mounted, setMounted] = useState(false);
-  // const { resolvedTheme, setTheme } = useTheme();
   const { t, i18n } = useTranslation();
 
   // Deliberate: language-dependent labels must not be rendered until after

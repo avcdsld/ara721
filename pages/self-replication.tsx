@@ -86,7 +86,7 @@ export default function SelfReplication() {
                 Flowscan (Contract)
               </a>
               <ul>
-                <li>{t('selfReplication.flowdiverDescription1')}</li>
+                <li>{t('selfReplication.flowscanDescription1')}</li>
               </ul>
             </li>
             <li>
@@ -98,7 +98,7 @@ export default function SelfReplication() {
                 Flowscan (Transaction)
               </a>
               <ul>
-                <li>{t('selfReplication.flowdiverDescription2')}</li>
+                <li>{t('selfReplication.flowscanDescription2')}</li>
               </ul>
             </li>
             <li>

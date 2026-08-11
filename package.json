@@ -3,6 +3,7 @@
   "license": "MIT",
   "scripts": {
     "build": "next build",
+    "prebuild": "node scripts/generate-sitemap.mjs",
     "dev": "next dev",
     "start": "next start",
     "lint": "eslint ."

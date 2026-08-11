@@ -12,7 +12,7 @@
         "headers": [
           {
             "key": "Content-Security-Policy",
-            "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' *.youtube.com *.twitter.com; child-src *.youtube.com *.google.com *.twitter.com; style-src 'self' 'unsafe-inline' *.googleapis.com; img-src * blob: data:; media-src *; connect-src *; font-src 'self'; frame-src *; worker-src 'self' blob:"
+            "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src * blob: data:; media-src *; connect-src *; font-src 'self'; frame-src *; worker-src 'self' blob:"
           },
           {
             "key": "Referrer-Policy",
