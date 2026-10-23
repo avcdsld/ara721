@@ -1,3 +1,4 @@
+// Redeployed 2026-10-23 to pick up Node.js 22.x security patch (CVE-2026-111497).
 import { onRequest } from 'firebase-functions/v2/https';
 import { defineSecret } from 'firebase-functions/params';
 import { logger } from 'firebase-functions';
